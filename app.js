@@ -249,6 +249,50 @@
 
 //  Find unique elements from two arrays.
 
- const a = [1, 2, 3]; const b = [3, 4, 5];
+//  const a = [1, 2, 3]; const b = [3, 4, 5];
 // Output:[1, 2, 4, 5]
+
+
+
+
+// =====================================================================================================================================
+
+// Task: Build a Mini Student Result Analyzer
+// Create a function that:
+// Takes an array of marks
+// Calculates:
+// Total
+// Average
+// Highest mark
+// Lowest mark
+// Returns result as an object
+
+const marks = [78, 92, 67, 85, 88];
+
+const stumarks=(marks)=>{
+let total=0
+let highest=marks[0]
+let lowest=marks[0]
+let average=0
+
+  for(let i=0; i<marks.length; i++){
+  total+=marks[i]
+
+  average=total/marks.length
+
+if(marks[i]>highest){
+    highest=marks[i]
+}
+if(marks[i]<lowest){
+    lowest=marks[i]
+}
+
+  }
+  return {
+    total, average, highest, lowest
+  }
+}
+let result=stumarks(marks)
+console.log(result)
+
 
